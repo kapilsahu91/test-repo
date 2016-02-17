@@ -25,6 +25,7 @@ public class Server {
 		try{
 
 			// To connect to mongodb server
+			System.out.println("get a sample chage in to git");
 			MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
 
 			// Now connect to your databases
