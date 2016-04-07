@@ -50,33 +50,6 @@ public class Server {
 		     
 		     Key<Sensor> savedSensor = datastore.save(sensor);   
 		     System.out.println(savedSensor.getId());
-	/*		 
-			 try{
-				conn = MySQLConnection.getConnection();
-				stmt = conn.prepareStatement("insert into sensor values(?,?)");
-				stmt.setString(1,sensor.getSensor_id());
-				stmt.setString(2,sensor.getSensor_data());
-				stmt.execute();
-					//conn.close();
-			  }catch(SQLException  ex){
-				  ex.printStackTrace();
-			  }
-
-			// Now connect to your databases
-			@SuppressWarnings("deprecation")
-			DB db = mongoClient.getDB( "TAD" );
-			System.out.println("Connect to database successfully");
-			//boolean auth = db.authenticate(myUserName, myPassword);
-			//System.out.println("Authentication: "+auth);
-
-			DBCollection coll = db.getCollection("sensor");
-			System.out.println("Collection firstCollection  selected successfully");
-
-			DBCursor cursor = coll.find();
-
-			while (cursor.hasNext()) { 
-				System.out.println(cursor.next().getClass());
-			}*/
 
 		}catch(Exception e){
 			System.err.println( e.getClass().getName() + ": " + e.getMessage() );
