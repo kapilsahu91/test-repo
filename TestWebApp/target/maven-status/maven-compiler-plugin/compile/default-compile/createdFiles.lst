@@ -1,1 +1,3 @@
 com\afour\server\Server.class
+com\afour\server\MySQLConnection.class
+com\afour\server\Sensor.class
