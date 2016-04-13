@@ -14,7 +14,6 @@ public class Channel{
 	private String field3;
 	private String field4;
 	private String field5;
-	//private String timestamp;
 	private String name;
 	private String description;
 	private String created_at;
@@ -101,7 +100,4 @@ public class Channel{
 	public void setUpdated_at(String updated_at) {
 		this.updated_at = updated_at;
 	}
-	
-	
-	
 }

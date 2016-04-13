@@ -2,14 +2,15 @@ package com.afour.tad.pojo;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.google.code.morphia.annotations.Entity;
-import com.google.code.morphia.annotations.Id;
 import com.google.code.morphia.annotations.Indexes;
 import com.google.code.morphia.annotations.Index;
 import com.google.code.morphia.annotations.Property;
  
 @Entity
 @XmlRootElement
-public class SensorNew {
+@Indexes(@Index(name = "aAndB", value = "a, b"))
+public class SensorNew extends BaseEntity {
+	@Property("b")
 	private String channel_id;
 	private String field1;
 	private String field2;
@@ -17,7 +18,7 @@ public class SensorNew {
 	private String field4;
 	private String field5;
 	private String created_at;
-	@Id
+	@Property("a")
 	private String entry_id;
 	
 	public String getChannel_id() {
